@@ -1,0 +1,15 @@
+import json
+from .models import Alert
+
+def format_alert(alert: Alert) -> str:
+    return (
+        f"[{alert.severity.upper()}] {alert.rule_name} "
+        f"pid={alert.pid} name={alert.name} "
+        f"matched={alert.matched_value} cmd={alert.cmdline}"
+    )
+
+def print_alert(alert: Alert) -> None:
+    print(format_alert(alert))
+
+def alert_to_json(alert: Alert) -> str:
+    return json.dumps(alert.__dict__, ensure_ascii=False)
