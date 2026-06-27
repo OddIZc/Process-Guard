@@ -1,0 +1,11 @@
+[project]
+name = "process-guard"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = ["psutil"]
+
+[project.scripts]
+process-guard = "process_guard.cli:main"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
