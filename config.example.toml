@@ -1,0 +1,5 @@
+[process_guard]
+interval = 2.0
+json_output = false
+enabled_rules = ["encoded_command", "temp_execution", "suspicious_scripting"]
+ignore_process_names = ["system", "idle"]
